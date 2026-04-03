@@ -1,6 +1,6 @@
 https://docs.google.com/document/d/1oV2TI-c-b5s0eC1SThLRfnuHx_kvwlRE1tSarfe-VrY/edit?usp=sharing -VIDEO DEMO LINK 
-pathvique-production.up.railway.app - BACKEND DEPLOYMENT
- https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/ -FRONTEND DEPLOYMENT
+pathvique-production.up.railway.app  -  BACKEND DEPLOYMENT
+ https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/   - FRONTEND DEPLOYMENT
 
  
 README:
@@ -9,8 +9,8 @@ Your city. Live. Understood.
 पथVique is a real-time urban infrastructure platform that bridges the gap between city governments and the people who actually live in them. Not another map app. Not another chatbot wrapper. A full digital twin of urban life — construction zones, flood risk, blocked roads, citizen reports — all in one place, moving in real time.
 
 The Problem
-Urban infrastructure is publicly funded but privately experienced. A road gets blocked, a zone floods, a footpath disappears under scaffolding — and the only people who know are the ones already stuck there. Mpathvique-production.up.railway.app - backend 
- https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/ -frontendeanwhile, the government has no reliable signal from the ground, and citizens have no reliable channel to the system. The data exists. The cameras exist. The complaints exist. None of it connects.
+Urban infrastructure is publicly funded but privately experienced. A road gets blocked, a zone floods, a footpath disappears under scaffolding — and the only people who know are the ones already stuck there.
+Meanwhile, the government has no reliable signal from the ground, and citizens have no reliable channel to the system. The data exists. The cameras exist. The complaints exist. None of it connects.
 पथVique is the missing layer between a city and its people — where citizen experience becomes city intelligence, and city intelligence becomes personal decisions.
 
 What It Does (Utilizing Data to the Fullest) :
