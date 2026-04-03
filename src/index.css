@@ -1,0 +1,10 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; }
+.leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+}
+.leaflet-popup-tip { background: #111827 !important; }
+.leaflet-popup-content { margin: 12px 14px !important; }
