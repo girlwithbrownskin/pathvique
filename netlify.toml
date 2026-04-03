@@ -1,7 +1,4 @@
 [build]
-  base = "dashboard/pathvique"
-  publish = "../dist"
-  command = "npx remix vite:build"
-
-[build.environment]
-  NODE_VERSION = "20"
+  base = "pathvique"
+  command = "npm run build"
+  publish = "pathvique/dist"
