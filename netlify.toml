@@ -1,4 +1,3 @@
 [build]
-  base = "dashboard/pathvique"
-  command = "npm run build"
-  publish = "dashboard/pathvique/dist"
+  command = "cd pathvique && npm run build"
+  publish = "pathvique/dist"
