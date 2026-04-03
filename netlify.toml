@@ -1,3 +1,0 @@
-[build]
-  command = "cd pathvique && npm run build"
-  publish = "pathvique/dist"
