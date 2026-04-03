@@ -1,5 +1,6 @@
 https://docs.google.com/document/d/1oV2TI-c-b5s0eC1SThLRfnuHx_kvwlRE1tSarfe-VrY/edit?usp=sharing -VIDEO DEMO LINK 
-pathvique-production.up.railway.app  -  BACKEND DEPLOYMENT
+
+  pathvique-production.up.railway.app  -  BACKEND DEPLOYMENT
  https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/   - FRONTEND DEPLOYMENT
 
  
