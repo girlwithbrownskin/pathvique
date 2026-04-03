@@ -1,11 +1,16 @@
+https://docs.google.com/document/d/1oV2TI-c-b5s0eC1SThLRfnuHx_kvwlRE1tSarfe-VrY/edit?usp=sharing -VIDEO DEMO LINK 
+pathvique-production.up.railway.app - BACKEND DEPLOYMENT
+ https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/ -FRONTEND DEPLOYMENT
 
+ 
 README:
 पथVique 
 Your city. Live. Understood.
 पथVique is a real-time urban infrastructure platform that bridges the gap between city governments and the people who actually live in them. Not another map app. Not another chatbot wrapper. A full digital twin of urban life — construction zones, flood risk, blocked roads, citizen reports — all in one place, moving in real time.
 
 The Problem
-Urban infrastructure is publicly funded but privately experienced. A road gets blocked, a zone floods, a footpath disappears under scaffolding — and the only people who know are the ones already stuck there. Meanwhile, the government has no reliable signal from the ground, and citizens have no reliable channel to the system. The data exists. The cameras exist. The complaints exist. None of it connects.
+Urban infrastructure is publicly funded but privately experienced. A road gets blocked, a zone floods, a footpath disappears under scaffolding — and the only people who know are the ones already stuck there. Mpathvique-production.up.railway.app - backend 
+ https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app/ -frontendeanwhile, the government has no reliable signal from the ground, and citizens have no reliable channel to the system. The data exists. The cameras exist. The complaints exist. None of it connects.
 पथVique is the missing layer between a city and its people — where citizen experience becomes city intelligence, and city intelligence becomes personal decisions.
 
 What It Does (Utilizing Data to the Fullest) :
@@ -23,9 +28,6 @@ AI / Data: Processes are executed in Python, handling data analysis and machine 
 Maps: Leverages the Google Maps API for geolocation, routing, and map visualizations.
 Database: Utilizing Firebase, which provides real-time data storage, authentication, and hosting services.
 Image Uploads: Managed by Cloudinary, a robust solution for uploading, transforming, and delivering images.
-
-Team 
-
 
 
 Project Structure
@@ -64,6 +66,7 @@ News apps tell you what happened yesterday.
 Government portals tell you to fill a form.
 
 पथVique tells the city what's happening — and tells you what to do about it.
+
 
 
 
