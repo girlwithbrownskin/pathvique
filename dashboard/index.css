@@ -1,16 +1,10 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #0a0a0f;
-  color: #e2e8f0;
-  min-height: 100vh;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; }
+.leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
 }
-
-h1, h2, h3, h4 {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0a0f; }
-::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 3px; }
+.leaflet-popup-tip { background: #111827 !important; }
+.leaflet-popup-content { margin: 12px 14px !important; }
