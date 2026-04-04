@@ -8,15 +8,30 @@ upload_bp = Blueprint("upload", __name__)
 def upload_report():
     if "image" not in request.files:
         return jsonify({"error": "No image provided"}), 400
+<<<<<<< HEAD
     file = request.files["image"]
     description = request.form.get("description", "")
     location = request.form.get("location", "Unknown")
     uploaded = upload_image(file)
     tag = answer(description)
+=======
+
+    file = request.files["image"]
+    description = request.form.get("description", "")
+    location = request.form.get("location", "Unknown")
+
+    uploaded = upload_image(file)
+    tag = answer(description)
+
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
     return jsonify({
         "status": "success",
         "image_url": uploaded["url"],
         "location": location,
         "description": description,
         "tag": tag
+<<<<<<< HEAD
     })
+=======
+    })
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79

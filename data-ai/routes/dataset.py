@@ -2,7 +2,11 @@ from flask import Blueprint, jsonify, request
 import json, os
 
 dataset_bp = Blueprint("dataset", __name__)
+<<<<<<< HEAD
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data")
+=======
+BASE = os.path.join(os.path.dirname(__file__), "../data")
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
 
 def load(file):
     with open(os.path.join(BASE, file)) as f:
@@ -58,11 +62,45 @@ def smart_route():
     )
     return jsonify(result)
 
+<<<<<<< HEAD
+=======
+@dataset_bp.route("/zone-advice/<area>", methods=["GET"])
+def zone_advice(area):
+    zones = load("flood_zones.json")
+    roads = load("roads.json")
+    
+    zone_data = next((z for z in zones if z["area"].lower() == area.lower()), None)
+    if not zone_data:
+        return jsonify({"error": "Area not found"}), 404
+
+    score = zone_data["risk_score"]
+    
+    if score > 70:
+        advice = "Avoid this area. Use alternate routes via GST Road or Anna Salai."
+        color = "red"
+    elif score > 40:
+        advice = "Proceed with caution. Monitor updates before travelling."
+        color = "orange"
+    else:
+        advice = "Area is safe. Normal travel conditions."
+        color = "green"
+
+    return jsonify({
+        "area": area,
+        "risk_score": score,
+        "status": zone_data["status"],
+        "advice": advice,
+        "color": color,
+        "last_updated": zone_data["last_updated"]
+    })
+
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
 @dataset_bp.route("/commute-impact", methods=["GET"])
 def commute_impact():
     roads = load("roads.json")
     construction = load("construction.json")
     floods = load("flood_zones.json")
+<<<<<<< HEAD
     blocked = [r for r in roads if r["status"] in ["blocked", "flooded"]]
     flood_zones = [f for f in floods if f["status"] != "clear"]
     impact = (len(blocked) * 30000) + (len(construction) * 15000) + (len(flood_zones) * 20000)
@@ -72,8 +110,29 @@ def commute_impact():
         "active_construction_sites": len(construction),
         "active_flood_zones": len(flood_zones),
         "summary": "Approximately " + str(impact) + " Chennai commuters affected by current conditions."
+=======
+
+    blocked = [r for r in roads if r["status"] in ["blocked", "flooded"]]
+    active_construction = len(construction)
+    flood_zones = [f for f in floods if f["status"] != "clear"]
+
+    # Calculate how many people are impacted
+    impact_score = (len(blocked) * 30000) + (active_construction * 15000) + (len(flood_zones) * 20000)
+
+    return jsonify({
+        "estimated_commuters_affected": impact_score,
+        "blocked_roads": len(blocked),
+        "active_construction_sites": active_construction,
+        "active_flood_zones": len(flood_zones),
+        "summary": f"Approximately {impact_score:,} Chennai commuters are affected by current infrastructure conditions.",
+        "timestamp": __import__("datetime").datetime.now().isoformat()
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
     })
 
 @dataset_bp.route("/history", methods=["GET"])
 def history():
+<<<<<<< HEAD
     return jsonify(load("history.json"))
+=======
+    return jsonify(load("history.json"))
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79

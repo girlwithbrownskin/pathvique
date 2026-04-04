@@ -16,4 +16,8 @@ def upload_image(file):
     return {
         "url": result["secure_url"],
         "public_id": result["public_id"]
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
