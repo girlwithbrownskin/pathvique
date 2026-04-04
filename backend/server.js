@@ -13,7 +13,7 @@ const FLASK_URL = process.env.FLASK_URL || "https://11devanshi.pythonanywhere.co
 
 // ─── CORS ────────────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174", "http://127.0.0.1:5173", "http://127.0.0.1:5174"],
+  origin: ["https://serene-otter-53fff9.netlify.app", "https://69cfd0b69d55f863b2cdb6bf--serene-otter-53fff9.netlify.app","http://localhost:5173","http://localhost:5174","http://127.0.0.1:5173","http://127.0.0.1:5174"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
