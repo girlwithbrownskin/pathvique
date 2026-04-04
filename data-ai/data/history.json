@@ -1,0 +1,6 @@
+
+[
+  {"date": "2026-04-01", "disaster_score": 45, "blocked_roads": 2, "flood_zones": 3},
+  {"date": "2026-04-02", "disaster_score": 58, "blocked_roads": 3, "flood_zones": 4},
+  {"date": "2026-04-03", "disaster_score": 63, "blocked_roads": 4, "flood_zones": 5}
+]
