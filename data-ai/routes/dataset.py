@@ -2,11 +2,7 @@ from flask import Blueprint, jsonify, request
 import json, os
 
 dataset_bp = Blueprint("dataset", __name__)
-<<<<<<< HEAD
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data")
-=======
 BASE = os.path.join(os.path.dirname(__file__), "../data")
->>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
 
 def load(file):
     with open(os.path.join(BASE, file)) as f:
@@ -39,16 +35,21 @@ def live_updates():
     from utils.news_scraper import get_chennai_traffic_updates
     return jsonify(get_chennai_traffic_updates())
 
-@dataset_bp.route("/chat", methods=["POST"])
-def chat():
-    from utils.smart_chatbot import answer
-    data = request.get_json()
-    question = data.get("question", "")
+
     if not question:
         return jsonify({"error": "No question provided"}), 400
+
+    # Translate if needed then answer
+    answer_text = ai_answer(question)
+
+    if lang != "en":
+        answer_text = translate_text(answer_text, lang)
+
     return jsonify({
         "question": question,
-        "answer": answer(question),
+        "answer": answer_text,
+        "language": lang,
+        "ai_powered": bool(os.getenv("HUGGINGFACE_KEY")),
         "timestamp": __import__("datetime").datetime.now().isoformat()
     })
 
@@ -62,19 +63,17 @@ def smart_route():
     )
     return jsonify(result)
 
-<<<<<<< HEAD
-=======
 @dataset_bp.route("/zone-advice/<area>", methods=["GET"])
 def zone_advice(area):
     zones = load("flood_zones.json")
     roads = load("roads.json")
-    
+
     zone_data = next((z for z in zones if z["area"].lower() == area.lower()), None)
     if not zone_data:
         return jsonify({"error": "Area not found"}), 404
 
     score = zone_data["risk_score"]
-    
+
     if score > 70:
         advice = "Avoid this area. Use alternate routes via GST Road or Anna Salai."
         color = "red"
@@ -94,23 +93,11 @@ def zone_advice(area):
         "last_updated": zone_data["last_updated"]
     })
 
->>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
 @dataset_bp.route("/commute-impact", methods=["GET"])
 def commute_impact():
     roads = load("roads.json")
     construction = load("construction.json")
     floods = load("flood_zones.json")
-<<<<<<< HEAD
-    blocked = [r for r in roads if r["status"] in ["blocked", "flooded"]]
-    flood_zones = [f for f in floods if f["status"] != "clear"]
-    impact = (len(blocked) * 30000) + (len(construction) * 15000) + (len(flood_zones) * 20000)
-    return jsonify({
-        "estimated_commuters_affected": impact,
-        "blocked_roads": len(blocked),
-        "active_construction_sites": len(construction),
-        "active_flood_zones": len(flood_zones),
-        "summary": "Approximately " + str(impact) + " Chennai commuters affected by current conditions."
-=======
 
     blocked = [r for r in roads if r["status"] in ["blocked", "flooded"]]
     active_construction = len(construction)
@@ -126,13 +113,44 @@ def commute_impact():
         "active_flood_zones": len(flood_zones),
         "summary": f"Approximately {impact_score:,} Chennai commuters are affected by current infrastructure conditions.",
         "timestamp": __import__("datetime").datetime.now().isoformat()
->>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
     })
 
 @dataset_bp.route("/history", methods=["GET"])
 def history():
-<<<<<<< HEAD
     return jsonify(load("history.json"))
-=======
-    return jsonify(load("history.json"))
->>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
+
+@dataset_bp.route("/chat", methods=["POST"])
+def chat():
+    from utils.ai_chatbot import ai_answer
+    from utils.translator import translate_text
+    import os
+
+    data = request.get_json()
+    question = data.get("question", "")
+    lang = data.get("language", "en")
+
+    if not question:
+        return jsonify({"error": "No question provided"}), 400
+
+    answer_text = ai_answer(question)
+
+    if lang != "en":
+        answer_text = translate_text(answer_text, lang)
+
+    return jsonify({
+        "question": question,
+        "answer": answer_text,
+        "language": lang,
+        "ai_powered": bool(os.getenv("HUGGINGFACE_KEY")),
+        "timestamp": __import__("datetime").datetime.now().isoformat()
+    })
+
+
+@dataset_bp.route("/ai-analytics", methods=["GET"])
+def ai_analytics():
+    from utils.ai_analytics import generate_city_report
+    roads = load("roads.json")
+    floods = load("flood_zones.json")
+    construction = load("construction.json")
+    return jsonify(generate_city_report(roads, floods, construction))
+    
