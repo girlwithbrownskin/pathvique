@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
   {"id": "R001", "name": "Anna Salai", "from": "Gemini Flyover", "to": "Kathipara Junction", "status": "open", "zone": "central", "lat": 13.0569, "lng": 80.2425},
   {"id": "R002", "name": "OMR Phase 1", "from": "Madhya Kailash", "to": "Perungudi", "status": "blocked", "zone": "south", "lat": 12.9716, "lng": 80.2426, "reason": "Metro rail construction"},
@@ -10,17 +9,4 @@
   {"id": "R008", "name": "Mount Road", "from": "Park Town", "to": "Saidapet", "status": "open", "zone": "central", "lat": 13.0604, "lng": 80.2496},
   {"id": "R009", "name": "Jawaharlal Nehru Road", "from": "Ekkattuthangal", "to": "Ashok Nagar", "status": "open", "zone": "west", "lat": 13.0156, "lng": 80.2012},
   {"id": "R010", "name": "Kamarajar Salai", "from": "Marina Beach", "to": "Foreshore Estate", "status": "open", "zone": "central", "lat": 13.0569, "lng": 80.2820}
-=======
-[
-  {"id": "R001", "name": "Anna Salai", "from": "Gemini Flyover", "to": "Kathipara Junction", "status": "open", "zone": "central", "lat": 13.0569, "lng": 80.2425},
-  {"id": "R002", "name": "OMR Phase 1", "from": "Madhya Kailash", "to": "Perungudi", "status": "blocked", "zone": "south", "lat": 12.9716, "lng": 80.2426, "reason": "Metro rail construction"},
-  {"id": "R003", "name": "Velachery Main Road", "from": "Velachery", "to": "Taramani", "status": "flooded", "zone": "south", "lat": 12.9815, "lng": 80.2180, "reason": "Waterlogging"},
-  {"id": "R004", "name": "Poonamallee High Road", "from": "Koyambedu", "to": "Porur", "status": "open", "zone": "west", "lat": 13.0418, "lng": 80.1756},
-  {"id": "R005", "name": "GST Road", "from": "Guindy", "to": "Tambaram", "status": "open", "zone": "south", "lat": 12.9249, "lng": 80.1000},
-  {"id": "R006", "name": "Rajiv Gandhi Salai", "from": "Tidel Park", "to": "Siruseri", "status": "open", "zone": "south", "lat": 12.9516, "lng": 80.2282},
-  {"id": "R007", "name": "Arcot Road", "from": "Vadapalani", "to": "Porur", "status": "blocked", "zone": "west", "lat": 13.0514, "lng": 80.1757, "reason": "Waterline repair"},
-  {"id": "R008", "name": "Mount Road", "from": "Park Town", "to": "Saidapet", "status": "open", "zone": "central", "lat": 13.0604, "lng": 80.2496},
-  {"id": "R009", "name": "Jawaharlal Nehru Road", "from": "Ekkattuthangal", "to": "Ashok Nagar", "status": "open", "zone": "west", "lat": 13.0156, "lng": 80.2012},
-  {"id": "R010", "name": "Kamarajar Salai", "from": "Marina Beach", "to": "Foreshore Estate", "status": "open", "zone": "central", "lat": 13.0569, "lng": 80.2820}
->>>>>>> b5969d478d9be1b63c90fb9d8edca3f246b56a79
 ]
